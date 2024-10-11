@@ -7,7 +7,7 @@ class BadAnnotationNameRuleTest {
 
     @Test
     void testHasNoIssues() {
-        var check = new DisallowGeneratedAnnotationDeclarationRuleOld();
+        var check = new BadAnnotationNameRule();
 
         CheckVerifier.newVerifier()
                 .onFile("src/test/files/generatedinterface/ManagedObject.java")
@@ -16,7 +16,7 @@ class BadAnnotationNameRuleTest {
     }
     @Test
     void testHasIssuesWithSourceRetention() {
-        var check = new DisallowGeneratedAnnotationDeclarationRuleOld();
+        var check = new BadAnnotationNameRule();
 
         CheckVerifier.newVerifier()
             .onFile("src/test/files/generatedinterface/GeneratedSource.java")
@@ -25,7 +25,7 @@ class BadAnnotationNameRuleTest {
     }
     @Test
     void testHasIssues() {
-        var check = new DisallowGeneratedAnnotationDeclarationRuleOld();
+        var check = new BadAnnotationNameRule();
 
         CheckVerifier.newVerifier()
             .onFile("src/test/files/generatedinterface/Generated.java")
@@ -34,7 +34,7 @@ class BadAnnotationNameRuleTest {
     }
     @Test
     void testHasIssuesWithNameContainingGenerated() {
-        var check = new DisallowGeneratedAnnotationDeclarationRuleOld();
+        var check = new BadAnnotationNameRule();
 
         CheckVerifier.newVerifier()
             .onFile("src/test/files/generatedinterface/IgnoreGeneratedJacocoCoverage.java")

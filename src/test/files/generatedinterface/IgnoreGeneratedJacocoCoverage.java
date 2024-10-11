@@ -2,9 +2,9 @@
 import java.lang.annotation.*;
 
 
-@Documented // Noncompliant {{Not allowed to create an annotation with name that contains 'Generated'}}
+@Documented
 @Target({ElementType.TYPE})
-public @interface IgnoreGeneratedJacocoCoverage
+public @interface IgnoreGeneratedJacocoCoverage // Noncompliant {{Not allowed to create an annotation with name that contains 'Generated'}}
 {
 
 

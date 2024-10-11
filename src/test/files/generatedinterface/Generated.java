@@ -2,10 +2,10 @@
 import java.lang.annotation.*;
 
 
-@Documented // Noncompliant {{Not allowed to create an annotation with name that contains 'Generated'}}
+@Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE})
-public @interface Generated
+public @interface Generated // Noncompliant {{Not allowed to create an annotation with name that contains 'Generated'}}
 {
 
 

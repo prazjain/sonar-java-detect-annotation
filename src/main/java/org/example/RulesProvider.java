@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.rules.DisallowGeneratedAnnotationDeclarationRuleOld;
+import org.example.rules.BadAnnotationNameRule;
 import org.example.rules.DisallowedAnnotationUsageRule;
 import org.sonar.plugins.java.api.JavaCheck;
 
@@ -24,7 +24,7 @@ public class RulesProvider {
      * These rules are going to target MAIN code only
      */
     public static List<Class<? extends JavaCheck>> getJavaChecks() {
-        return List.of(DisallowGeneratedAnnotationDeclarationRuleOld.class, DisallowedAnnotationUsageRule.class);
+        return List.of(BadAnnotationNameRule.class, DisallowedAnnotationUsageRule.class);
     }
 
     /**

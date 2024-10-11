@@ -39,44 +39,4 @@ public class DisallowedAnnotationUsageRule extends BaseTreeVisitor implements Ja
     }
     super.visitAnnotation(annotationTree);
   }
-/*
-  @Override
-  public void visitClass(ClassTree tree) {
-    List<AnnotationTree> annotations = tree.modifiers().annotations();
-    if (hasGeneratedAnnotation(annotations)) {
-      context.reportIssue(this, tree, "Not allowed to use annotation @Generated");
-    }
-    super.visitClass(tree);
-  }
-
-  @Override
-  public void visitMethod(MethodTree tree) {
-    List<AnnotationTree> annotations = tree.modifiers().annotations();
-    if (hasGeneratedAnnotation(annotations)) {
-      context.reportIssue(this, tree, "Not allowed to use annotation @Generated");
-    }
-    super.visitMethod(tree);
-  }
-
-  private boolean hasGeneratedAnnotation(List<AnnotationTree> annotations) {
-    for (AnnotationTree annotationTree : annotations) {
-      TypeTree annotationType = annotationTree.annotationType();
-      System.out.println(annotationType.symbolType().name());;
-      System.out.println(annotationType.symbolType().fullyQualifiedName());;
-      if (annotationType.is(Tree.Kind.IDENTIFIER)) {
-        String idName = ((IdentifierTree) annotationType).name();
-        if (idName.equals("Generated") || idName.equals("lombok.Generated") ) {
-          return true;
-        }
-      } else if (annotationType.is(Kind.MEMBER_SELECT)) {
-        MemberSelectExpressionTree memberSelect = ((MemberSelectExpressionTree) annotationType);
-        String idName = memberSelect.expression().symbolType().name() + memberSelect.operatorToken() + memberSelect.identifier().name();
-        if (idName.equals("Generated") || idName.equals("lombok.Generated") ) {
-          return true;
-        }
-      }
-    }
-    return false;
-  }
-*/
 }
