@@ -1,0 +1,9 @@
+services:
+  sonarqube:
+    image: sonarqube:10.3-community
+    hostname: sonarqube
+    container_name: sonarqube
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./volumes/plugins:/opt/sonarqube/extensions/plugins

@@ -1,0 +1,18 @@
+<p>Disallow creation of Annotation by name 'Generated'.</p>
+
+<h2>Noncompliant Code Example</h2>
+<pre>
+public @interface Generated // Noncompliant
+{
+}
+public @interface SomeGeneratedName // Noncompliant
+{
+}
+</pre>
+
+<h2>Compliant Solution</h2>
+<pre>
+public @interface AnyOtherName // Compliant
+{
+}
+</pre>

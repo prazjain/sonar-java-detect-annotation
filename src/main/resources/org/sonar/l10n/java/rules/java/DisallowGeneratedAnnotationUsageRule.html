@@ -1,0 +1,34 @@
+<p>Disallow method calls for specified types.</p>
+
+<h2>Given class and methods with prohibited annotations</h2>
+
+<h2>Noncompliant Code Example</h2>
+<pre>
+  @Generated // Noncompliant
+class MyClass {
+  @Generated // Noncompliant
+  int doSomething(int a) {
+    return 42;
+  }
+  @lombok.Generated // Noncompliant
+  void saySomething() {
+  }
+}
+  @lombok.Generated // Noncompliant
+  class NewClass { }
+</pre>
+
+<h2>Compliant Solution</h2>
+<pre>
+class MyClass {
+  int doSomething(int a) { // Compliant
+    return 42;
+  }
+  void saySomething() { // Compliant
+
+  }
+}
+  class NewClass { // Compliant
+
+  }
+</pre>

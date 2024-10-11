@@ -1,0 +1,9 @@
+{
+  "title": "Disallow use of Annotation with name that contains 'Generated' or @lombok.Generated annotation value in source code",
+  "type": "Bug",
+  "status": "ready",
+  "tags": [
+    "bugs"
+  ],
+  "defaultSeverity": "Major"
+}
