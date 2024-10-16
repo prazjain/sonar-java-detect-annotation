@@ -11,7 +11,7 @@ import org.sonar.plugins.java.api.tree.Tree;
 import org.sonar.plugins.java.api.tree.Tree.Kind;
 import org.sonar.plugins.java.api.tree.TypeTree;
 
-@Rule(key = "DisallowGeneratedAnnotationUsage")
+@Rule(key = "DisallowedAnnotationUsageRule")
 public class DisallowedAnnotationUsageRule extends BaseTreeVisitor implements JavaFileScanner {
 
   private JavaFileScannerContext context;

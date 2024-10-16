@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.Collections;
 import org.sonar.api.SonarRuntime;
 import org.sonar.api.server.rule.RulesDefinition;
 import org.sonarsource.analyzer.commons.RuleMetadataLoader;
@@ -18,7 +19,7 @@ public class CustomRulesDefinition implements RulesDefinition {
     public static final String REPOSITORY_NAME = "Example Custom Repository";
 
     // Add the rule keys of the rules which need to be considered as template-rules
-    private static final Set<String> RULE_TEMPLATES_KEY = Set.of("BadAnnotationNameRule", "DisallowedAnnotationUsageRule");
+    private static final Set<String> RULE_TEMPLATES_KEY = Collections.emptySet();
 
     private final SonarRuntime runtime;
 
